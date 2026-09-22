@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Каталог - NutriFit</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="main-layout">
+
+  <!-- Mobile Header -->
+  <header class="app-header mobile-only">
+    <div>
+      <div style="font-size: 0.625rem; color: var(--text-light); text-transform: uppercase;">Доставка по Минску</div>
+      <div class="app-location">📍 г. Минск, пр. Независимости 48 ▼</div>
+    </div>
+    <div style="width: 2rem; height: 2rem; background: #fbbf24; border-radius: 50%;"></div>
+  </header>
+
+  <!-- Desktop Header -->
+  <nav class="desktop-nav">
+    <div class="logo-header" style="margin-bottom: 0;">
+      <div class="logo-icon"></div>
+      <span>NutriFit Минск</span>
+    </div>
+    <ul class="desktop-nav-links">
+      <li><a href="#" style="color: var(--primary-color); font-weight: bold;">Кулинарный журнал</a></li>
+      <li><a href="#" style="color: var(--text-dark);">Рационы в Минске</a></li>
+      <li><a href="#" style="color: var(--text-dark);">Дневник КБЖУ</a></li>
+      <li><a href="#" style="color: var(--text-dark);">Статьи и рецепты</a></li>
+    </ul>
+    <div style="display: flex; gap: 1rem; align-items: center;">
+      <input type="text" placeholder="🔍 Поиск блюд..." style="border: 1px solid var(--border-color); border-radius: 1.5rem; padding: 0.5rem 1rem;">
+      <button class="btn btn-secondary" style="border-radius: 2rem; padding: 0.5rem 1rem;">🛒 Корзина (2) • 26,80 руб.</button>
+      <div style="width: 2rem; height: 2rem; background: #fbbf24; border-radius: 50%;"></div>
+    </div>
+  </nav>
+
+  <!-- Mobile Search & Categories -->
+  <div class="search-bar mobile-only">
+    <input type="text" placeholder="🔍 Поиск рецептов, КБЖУ, блюд...">
+  </div>
+  
+  <div class="category-chips mobile-only">
+    <div class="chip active">🔥 Все рецепты</div>
+    <div class="chip">🥗 ПП-Боулы</div>
+    <div class="chip">🍓 Смузи & Шейки</div>
+  </div>
+
+  <div class="promo-banner mobile-only">
+    <div style="font-size: 0.625rem; text-transform: uppercase; margin-bottom: 0.25rem;">Рацион недели • Минск</div>
+    <div style="font-size: 1.125rem; font-weight: bold;">Скидка 20% на меню Smart Fit</div>
+    <div style="font-size: 0.75rem;">Бесплатная доставка от 25,00 руб.</div>
+  </div>
+
+  <main class="catalog-content">
+    
+    <!-- Left Sidebar (Desktop) -->
+    <aside class="filters-sidebar">
+      <h3 style="display: flex; justify-content: space-between;">Фильтры рецептов <a href="#" style="font-size: 0.75rem; font-weight: normal;">Сбросить</a></h3>
+      
+      <div style="margin-bottom: 1.5rem;">
+        <h4 style="font-size: 0.875rem; margin-bottom: 0.5rem;">Цель питания</h4>
+        <label style="display: block; font-size: 0.875rem; margin-bottom: 0.25rem;"><input type="checkbox" checked> Снижение веса (Fit)</label>
+        <label style="display: block; font-size: 0.875rem; margin-bottom: 0.25rem;"><input type="checkbox"> Поддержание формы</label>
+        <label style="display: block; font-size: 0.875rem; margin-bottom: 0.25rem;"><input type="checkbox"> Набор массы (Pro)</label>
+      </div>
+      
+      <div style="margin-bottom: 1.5rem;">
+        <h4 style="font-size: 0.875rem; margin-bottom: 0.5rem;">Цена в рублях (BYN)</h4>
+        <div style="display: flex; gap: 0.5rem;">
+          <input type="text" value="5.00" style="width: 50%; padding: 0.25rem; border: 1px solid var(--border-color);">
+          <input type="text" value="25.00" style="width: 50%; padding: 0.25rem; border: 1px solid var(--border-color);">
+        </div>
+      </div>
+      
+      <div style="margin-bottom: 1.5rem;">
+        <h4 style="font-size: 0.875rem; margin-bottom: 0.5rem;">Особенности блюд</h4>
+        <label style="display: block; font-size: 0.875rem; margin-bottom: 0.25rem;"><input type="checkbox" checked> Без лактозы</label>
+        <label style="display: block; font-size: 0.875rem; margin-bottom: 0.25rem;"><input type="checkbox"> Без глютена</label>
+        <label style="display: block; font-size: 0.875rem; margin-bottom: 0.25rem;"><input type="checkbox"> Вегетарианское</label>
+      </div>
+    </aside>
+
+    <!-- Center Content -->
+    <section class="recipe-grid-container">
+      <div style="display: flex; justify-content: space-between; align-items: center; padding: 0 1rem;">
+        <h2 style="font-size: 1.25rem;">Популярное в журнале <span class="mobile-only" style="display:none;"></span><span style="display:none;" class="desktop-only">Рецепты и блюда (г. Минск)</span></h2>
+        <select style="display: none;" class="desktop-only-select">
+          <option>Сортировка: По популярности</option>
+        </select>
+      </div>
+
+      <div class="recipe-grid">
+        <!-- Recipe Card 1 -->
+        <a href="recipe.html" class="recipe-card">
+          <div class="recipe-img">
+            <span style="position: absolute; top: 0.5rem; right: 0.5rem; background: white; padding: 0.25rem 0.5rem; border-radius: 1rem; font-size: 0.75rem; font-weight: bold;">★ 4.9</span>
+            <span style="position: absolute; bottom: 0.5rem; left: 0.5rem; background: #065f46; color: white; padding: 0.25rem 0.5rem; border-radius: 1rem; font-size: 0.75rem;">480 ккал</span>
+          </div>
+          <div class="recipe-info">
+            <h3 style="margin: 0 0 0.25rem 0; font-size: 1rem;">Авокадо-боул с лососем и киноа</h3>
+            <p style="margin: 0; font-size: 0.75rem; color: var(--text-light);">Лосось, свежий авокадо, киноа, огурцы</p>
+            <div class="recipe-meta">
+              <div>
+                <span class="price">16,90 руб.</span>
+                <span style="font-size: 0.75rem; color: var(--text-light);">/ 350г</span>
+              </div>
+              <button class="btn btn-secondary" style="padding: 0.5rem 1rem; border-radius: 1.5rem; font-size: 0.875rem;">+ В дневник</button>
+            </div>
+          </div>
+        </a>
+        
+        <!-- Recipe Card 2 (Desktop demo) -->
+        <a href="recipe.html" class="recipe-card mobile-only" style="display: none;">
+          <div class="recipe-img" style="background: #fbcfe8;"></div>
+          <div class="recipe-info">
+            <h3 style="margin: 0 0 0.25rem 0; font-size: 1rem;">Клубничный протеин</h3>
+            <p style="margin: 0; font-size: 0.75rem; color: var(--text-light);">180 ккал • 22г Б • 2г Ж • 14г У</p>
+            <div class="recipe-meta">
+              <span class="price">9,90 руб.</span>
+              <button class="btn btn-secondary" style="padding: 0.5rem 1rem; border-radius: 1.5rem; font-size: 0.875rem;">+ В дневник</button>
+            </div>
+          </div>
+        </a>
+
+        <!-- Recipe Card 3 (Desktop demo) -->
+        <a href="recipe.html" class="recipe-card mobile-only" style="display: none;">
+          <div class="recipe-img" style="background: #fed7aa;"></div>
+          <div class="recipe-info">
+            <h3 style="margin: 0 0 0.25rem 0; font-size: 1rem;">Стейк из индейки с киноа</h3>
+            <p style="margin: 0; font-size: 0.75rem; color: var(--text-light);">520 ккал • 42г Б • 12г Ж • 38г У</p>
+            <div class="recipe-meta">
+              <span class="price">18,50 руб.</span>
+              <button class="btn btn-secondary" style="padding: 0.5rem 1rem; border-radius: 1.5rem; font-size: 0.875rem;">+ В дневник</button>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- Right Sidebar (Desktop) -->
+    <aside class="diary-sidebar">
+      <h3 style="font-size: 1rem;">Ваш дневник на сегодня</h3>
+      <div style="background: var(--primary-light); padding: 1rem; border-radius: 1rem; margin-bottom: 1rem;">
+        <div style="font-size: 0.75rem;">КБЖУ рассчитано</div>
+        <div style="font-size: 1.25rem; font-weight: bold; color: var(--primary-color);">660 / 2000 ккал</div>
+      </div>
+      <div style="display: flex; justify-content: space-between; font-size: 0.875rem; margin-bottom: 0.5rem;">
+        <span>1x Авокадо-боул</span>
+        <strong>16,90 руб.</strong>
+      </div>
+      <div style="display: flex; justify-content: space-between; font-size: 0.875rem; margin-bottom: 1rem;">
+        <span>1x Клубничный смузи</span>
+        <strong>9,90 руб.</strong>
+      </div>
+      <button class="btn btn-primary">Заказать в Минске - 26,80 руб.</button>
+    </aside>
+
+  </main>
+
+  <!-- Mobile Bottom Nav -->
+  <nav class="bottom-nav mobile-only">
+    <a href="#" class="nav-item active">
+      <span style="font-size: 1.5rem;">📖</span>
+      Рецепты
+    </a>
+    <a href="#" class="nav-item">
+      <span style="font-size: 1.5rem;">🏷️</span>
+      Журнал
+    </a>
+    <a href="#" class="nav-item">
+      <span style="font-size: 1.5rem;">📊</span>
+      Дневник
+    </a>
+  </nav>
+
+  <style>
+    @media (min-width: 768px) {
+      .recipe-card.mobile-only {
+        display: flex !important;
+      }
+      .desktop-only { display: inline !important; }
+      .desktop-only-select { display: block !important; }
+      .recipe-grid-container h2 {
+        font-size: 1.5rem !important;
+      }
+    }
+  </style>
+
+</body>
+</html>

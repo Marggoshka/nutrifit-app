@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Авокадо-боул - NutriFit</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="recipe-page">
+
+  <!-- Desktop Header -->
+  <nav class="desktop-nav">
+    <div class="logo-header" style="margin-bottom: 0;">
+      <div class="logo-icon"></div>
+      <span>NutriFit Минск</span>
+    </div>
+    <ul class="desktop-nav-links">
+      <li><a href="#" style="color: var(--primary-color); font-weight: bold;">Кулинарный журнал</a></li>
+      <li><a href="#" style="color: var(--text-dark);">Рационы в Минске</a></li>
+      <li><a href="#" style="color: var(--text-dark);">Дневник КБЖУ</a></li>
+      <li><a href="#" style="color: var(--text-dark);">Статьи и рецепты</a></li>
+    </ul>
+    <div style="display: flex; gap: 1rem; align-items: center;">
+      <input type="text" placeholder="🔍 Поиск блюд..." style="border: 1px solid var(--border-color); border-radius: 1.5rem; padding: 0.5rem 1rem;">
+      <button class="btn btn-secondary" style="border-radius: 2rem; padding: 0.5rem 1rem;">🛒 Корзина (2) • 26,80 руб.</button>
+      <div style="width: 2rem; height: 2rem; background: #fbbf24; border-radius: 50%;"></div>
+    </div>
+  </nav>
+
+  <!-- Content (Mobile + Desktop layout wrapper) -->
+  <main class="desktop-recipe-layout">
+    
+    <!-- Image Column -->
+    <div class="recipe-gallery-col">
+      <div class="recipe-header-img">
+        <a href="catalog.html" class="back-btn">←</a>
+        <button class="fav-btn">❤</button>
+        <span class="mobile-only" style="position: absolute; bottom: 1rem; right: 1rem; background: rgba(0,0,0,0.5); color: white; padding: 0.25rem 0.5rem; border-radius: 1rem; font-size: 0.75rem;">1 / 4 фото</span>
+      </div>
+      
+      <!-- Desktop only gallery thumbnails -->
+      <div class="desktop-gallery">
+        <div class="gallery-thumb" style="border: 2px solid var(--primary-color);"></div>
+        <div class="gallery-thumb"></div>
+        <div class="gallery-thumb"></div>
+      </div>
+    </div>
+
+    <!-- Info Column -->
+    <div class="recipe-info-col recipe-details-content">
+      <div class="desktop-only" style="font-size: 0.75rem; color: var(--primary-color); margin-bottom: 0.5rem; display: none;">Кулинарный журнал NutriFit Минск</div>
+      
+      <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+        <h1 class="recipe-title">Авокадо-боул с лососем и киноа</h1>
+        <span style="background: #fef08a; padding: 0.25rem 0.5rem; border-radius: 1rem; font-size: 0.875rem; font-weight: bold; white-space: nowrap;">★ 4.9 <span class="desktop-only" style="display:none; font-weight:normal; font-size: 0.75rem;"><br>(128 отзывов)</span></span>
+      </div>
+      
+      <p style="color: var(--text-light); font-size: 0.875rem; margin-top: 0.5rem;">
+        Сбалансированный обед с высокогорным киноа, ломтиками слабосоленой семги, свежим авокадо Хасс и оливковым маслом.
+      </p>
+
+      <h3 style="font-size: 1rem; margin-top: 1.5rem; margin-bottom: 0.5rem;">Пищевая ценность (на порцию 350г):</h3>
+      <div class="nutrition-cards">
+        <div class="nutrition-card kcal">
+          <div style="font-weight: bold; font-size: 1.25rem;">480</div>
+          <div style="font-size: 0.75rem;">Ккал</div>
+        </div>
+        <div class="nutrition-card protein">
+          <div style="font-weight: bold; font-size: 1.25rem;">28г</div>
+          <div style="font-size: 0.75rem;">Белки</div>
+        </div>
+        <div class="nutrition-card fat">
+          <div style="font-weight: bold; font-size: 1.25rem;">18г</div>
+          <div style="font-size: 0.75rem;">Жиры</div>
+        </div>
+        <div class="nutrition-card carbs">
+          <div style="font-weight: bold; font-size: 1.25rem;">42г</div>
+          <div style="font-size: 0.75rem;">Углеводы</div>
+        </div>
+      </div>
+
+      <h3 style="font-size: 1rem; margin-top: 1.5rem; margin-bottom: 0.5rem;">Ингредиенты рецепта:</h3>
+      <div class="ingredients-list">
+        <div class="ingredient-chip">🐟 Слабосоленый лосось</div>
+        <div class="ingredient-chip">🥑 Авокадо Хасс</div>
+        <div class="ingredient-chip">🌾 Киноа</div>
+      </div>
+
+      <!-- Desktop Add Button -->
+      <div class="desktop-only" style="display: none; margin-top: 2rem; background: var(--bg-main); padding: 1.5rem; border-radius: 1rem; align-items: center; justify-content: space-between;">
+        <div>
+          <div style="font-size: 0.75rem; color: var(--text-light);">Цена за порцию в Минске</div>
+          <div class="price" style="font-size: 1.5rem;">16,90 руб.</div>
+        </div>
+        <button class="btn btn-primary" style="width: auto; padding: 1rem 2rem; border-radius: 2rem;">+ Добавить в дневник питания</button>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Mobile Bottom Sticky Nav -->
+  <div class="mobile-only" style="position: sticky; bottom: 0; background: var(--bg-card); padding: 1rem; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-color); padding-bottom: 2rem;">
+    <div>
+      <div style="font-size: 0.625rem; color: var(--text-light);">Стоимость в Минске</div>
+      <div class="price">16,90 руб.</div>
+    </div>
+    <button class="btn btn-primary" style="width: auto; padding: 0.75rem 2rem; border-radius: 2rem;">+ В мой дневник</button>
+  </div>
+
+  <style>
+    @media (min-width: 768px) {
+      .desktop-only { display: flex !important; }
+      span.desktop-only { display: inline !important; }
+    }
+  </style>
+
+</body>
+</html>

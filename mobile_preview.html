@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Предпросмотр мобильной версии</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #e5e5e5;
+      font-family: sans-serif;
+      padding: 2rem;
+    }
+    .phone-mockup {
+      width: 375px;
+      height: 812px;
+      border: 16px solid #333;
+      border-radius: 36px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      background: white;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    .controls {
+      margin-bottom: 1rem;
+      display: flex;
+      gap: 1rem;
+    }
+    button {
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Мобильная версия</h1>
+  <p>Выберите экран для просмотра в мобильном формате:</p>
+
+  <div class="controls">
+    <button onclick="document.getElementById('preview').src='index.html'">1. Вход</button>
+    <button onclick="document.getElementById('preview').src='catalog.html'">2. Каталог</button>
+    <button onclick="document.getElementById('preview').src='recipe.html'">3. Рецепт</button>
+  </div>
+
+  <div class="phone-mockup">
+    <iframe id="preview" src="index.html"></iframe>
+  </div>
+
+</body>
+</html>

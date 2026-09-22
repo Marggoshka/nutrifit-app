@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Вход - NutriFit</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="auth-page">
+    
+    <section class="auth-info">
+      <div class="logo-header">
+        <div class="logo-icon" style="background: white;"></div>
+        <span style="color: white;">NutriFit Минск</span>
+      </div>
+      <h1 style="font-size: 3rem; margin-bottom: 1rem;">Кулинарный журнал и сервис здорового питания в Минске</h1>
+      <p style="font-size: 1.125rem; margin-bottom: 3rem;">Точный расчет КБЖУ, рецепты от нутрициологов и быстрая доставка готовых блюд по всему Минску.</p>
+      
+      <div style="display: flex; gap: 2rem;">
+        <div>
+          <div style="font-size: 1.5rem; font-weight: bold;">5,400+</div>
+          <div style="font-size: 0.875rem; opacity: 0.8;">Читателей в Минске</div>
+        </div>
+        <div>
+          <div style="font-size: 1.5rem; font-weight: bold;">4.9 ★</div>
+          <div style="font-size: 0.875rem; opacity: 0.8;">Оценка рецептов</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="auth-form-container">
+      <div class="mobile-only logo-header" style="justify-content: center; margin-bottom: 1rem;">
+        <div class="logo-icon"></div>
+        <span>NutriFit <br><small style="color:var(--primary-color)">КУЛИНАРНЫЙ ЖУРНАЛ</small></span>
+      </div>
+
+      <div class="auth-welcome">
+        <h2>С возвращением!</h2>
+        <p>Войдите в журнал для учета КБЖУ и заказа еды в Минске</p>
+      </div>
+
+      <form action="catalog.html">
+        <div class="form-group">
+          <label>Телефон (+375) или Email</label>
+          <input type="text" value="+375 (29) 684-12-34" placeholder="Введите телефон или email">
+        </div>
+
+        <div class="form-group">
+          <div style="display: flex; justify-content: space-between;">
+            <label>Пароль</label>
+            <a href="#" style="font-size: 0.875rem;">Забыли?</a>
+          </div>
+          <input type="password" value="************">
+        </div>
+
+        <label class="form-remember">
+          <input type="checkbox" checked>
+          Запомнить меня на этом iPhone
+        </label>
+
+        <button type="submit" class="btn btn-primary">Войти в журнал</button>
+      </form>
+
+      <div class="auth-socials">
+        <div style="text-align: center; font-size: 0.875rem; color: var(--text-light); position: relative;">
+          <span style="background: var(--bg-card); padding: 0 0.5rem; position: relative; z-index: 1;">или авторизация через</span>
+          <div style="position: absolute; top: 50%; left: 0; right: 0; height: 1px; background: var(--border-color); z-index: 0;"></div>
+        </div>
+        
+        <div class="social-buttons">
+          <button class="btn btn-outline" style="border-radius: 2rem;">Я Яндекс ID</button>
+          <button class="btn btn-outline" style="border-radius: 2rem;">VK VK ID</button>
+        </div>
+      </div>
+
+      <footer class="auth-footer">
+        Ещё нет аккаунта? <a href="#">Создать аккаунт</a>
+      </footer>
+    </section>
+
+  </main>
+</body>
+</html>
